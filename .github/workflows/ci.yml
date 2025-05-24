@@ -5,7 +5,8 @@ on:
     branches: [ main, develop ]
     types: [ opened, reopened ]
   push:
-    branches: [ develop ]
+    branches: [ main ]
+
 jobs:
   build:
     runs-on: ubuntu-latest
