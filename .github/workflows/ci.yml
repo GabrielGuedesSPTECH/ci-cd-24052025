@@ -47,9 +47,9 @@ jobs:
       - build
       - test
     steps:
-      - name: "CD no Diretório"
-        run: cd calcular-inss
-
+#      - name: "Clonar repositório"
+#        uses: actions/checkout@v4
+#
       - name: Configurando QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -65,5 +65,7 @@ jobs:
       - name: Buildar e publicar
         uses: docker/build-push-action@v3
         with:
+          context: ./calcular-inss
+          file: ./calcular-inss/Dockerfile
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/ci-cd24052025:latest
