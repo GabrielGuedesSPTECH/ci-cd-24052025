@@ -48,7 +48,7 @@ jobs:
       - test
     steps:
       - name: "CD no Diretório"
-        run: cd ./calcular-inss
+        run: cd calcular-inss
 
       - name: Configurando QEMU
         uses: docker/setup-qemu-action@v3
