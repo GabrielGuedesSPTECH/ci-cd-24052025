@@ -31,7 +31,7 @@ jobs:
       - name: "Clonar repositório"
         uses: actions/checkout@v4
 
-      - name: Baixar a JDK 17
+      - name: Baixar a JDK 21
         uses: actions/setup-java@v4
         with:
           distribution: 'corretto'
@@ -47,6 +47,9 @@ jobs:
       - build
       - test
     steps:
+      - name: "CD no Diretório"
+        run: cd ./calcular-inss
+
       - name: Configurando QEMU
         uses: docker/setup-qemu-action@v3
 
