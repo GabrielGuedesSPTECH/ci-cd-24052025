@@ -20,4 +20,6 @@ jobs:
           java-version: 21
 
       - name: Buildar com Maven
-        run: mvn -B package -DskipTests 
+        run: |
+          cd calcular-inss
+          mvn -B package -DskipTests
