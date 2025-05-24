@@ -47,9 +47,9 @@ jobs:
       - build
       - test
     steps:
-#      - name: "Clonar repositório"
-#        uses: actions/checkout@v4
-#
+      - name: "Clonar repositório"
+        uses: actions/checkout@v4
+
       - name: Configurando QEMU
         uses: docker/setup-qemu-action@v3
 
